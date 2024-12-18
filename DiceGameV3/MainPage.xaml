@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceGameV3.MainPage">
+    <StackLayout>
+    <VerticalStackLayout BackgroundColor="Black">
+        <Label Text="TOKSYCZNE KOŚCI" HorizontalOptions="Center" TextColor="LawnGreen" FontSize="50" FontAttributes="Bold"></Label>
+            <Grid RowDefinitions="*" ColumnDefinitions="*,*,*" BackgroundColor="DarkSlateGray">
+            <Label Padding="15" Text="W laboratorium firmy Exiset na półce leżały kości stworzone z różnych radioaktywnych i wysoce reaktywnych pierwiastków." VerticalTextAlignment="Center"></Label>
+                <Label Padding="15" Grid.Column="1" Text="Na wskutek trzęsienia ziemi wszystkie kości wysypały się i zmieszały, tworząc śmiertelnie niebezpieczne połączenia." VerticalTextAlignment="Center"></Label>
+                <Label Padding="15" Grid.Column="2" Text="Czy będziesz miał tyle szczęścia, aby stworzyć odpowiednie pierwiastki zanim promieniowanie odbierze Ci życie?" VerticalTextAlignment="Center"></Label>
+        </Grid>
+        </VerticalStackLayout>
+        <VerticalStackLayout BackgroundColor="DimGray">
+            <Grid ColumnDefinitions="*,*,*,*" RowDefinitions="*">
+                <Label x:Name="health" FontSize="20"  HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="LightSeaGreen"></Label>
+                <Label Grid.Column="1" x:Name="experiance" FontSize="20" Padding="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Background="Red"></Label>
+                <Label Grid.Column="2" x:Name="radioactivity" FontSize="20" Padding="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Background="Red"></Label>
+                <Label Grid.Column="3" x:Name="periodicRequest" FontSize="20" Padding="15" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" BackgroundColor="Black"></Label>
+            </Grid>
+            <HorizontalStackLayout Margin="0, 10" HorizontalOptions="Center">
+                <Image x:Name="firstDice" Margin="10,0" Source="kostka0.png"></Image>
+                <Image x:Name="secondDice" Margin="10,0" Source="kostka0.png"></Image>
+                <Image x:Name="thirdDice" Margin="10,0" Source="kostka0.png"></Image>
+                <Image x:Name="fourthDice" Margin="10,0" Source="kostka0.png"></Image>
+                <Image x:Name="fifthDice" Margin="10,0" Source="kostka0.png"></Image>
+            </HorizontalStackLayout>
+            <Button x:Name="playButton" FontSize="20" BackgroundColor="LightGrey" Text="Przetasuj kości" Margin="0, 10" HorizontalOptions="Center" Clicked="Roll"></Button>
+        </VerticalStackLayout>
+        <Label x:Name="info"></Label>
+    </StackLayout>
+</ContentPage>
